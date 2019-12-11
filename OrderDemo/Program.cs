@@ -53,7 +53,7 @@ namespace OrderDemo
             Section newTargetSection = new Section(targetSection.Id, targetSection.Name, sectionToMove.Id);
             Section newNextFromTargetSection = new Section(nextFromTarget.Id, nextFromTarget.Name, sectionToMove.PreviousId);
 
-            var newSections = sections
+            List<Section> newSections = sections
                 .Where(x =>
                     x.Id != sectionId &&
                     x.Id != targetId &&
